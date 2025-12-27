@@ -3,11 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    [Header("Movement")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
-
-    [Header("Ground Check")]
     public Transform groundCheck;
     public LayerMask groundLayer;
     public float groundRadius = 0.2f;
@@ -23,7 +20,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        // Read horizontal input (A / D or Arrow keys)
         horizontal = Keyboard.current.aKey.isPressed ? -1 :
                      Keyboard.current.dKey.isPressed ? 1 : 0;
 
